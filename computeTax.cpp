@@ -1,0 +1,7 @@
+#include "computeTax.h"
+
+using namespace std;
+
+float computeTax::computeTax(){
+
+}
