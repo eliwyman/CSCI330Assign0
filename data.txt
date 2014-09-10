@@ -4,3 +4,68 @@ netIncomehigh1
 taxBase1
 taxRate1
 
+
++++++++++fileHandler.cp++++++++++++++++++
+
+#include "fileHandler.h"
+
+using namespace std;
+
+void fileHandler::openFile(string file) {
+
+    //save the name of the file to the class variable
+	fileName = file;
+
+    //open the file
+    inf.open(fileName);
+
+    //test the file to have been opened properly
+    if (inf.fail()) {
+        throw 1;
+        exit;
+    }
+}
+
+string* fileHandler::toStringArray(string arr[]) {
+
+    //until the file ends, grabs one line at a time
+    int i = 0;
+
+    while(!inf.eof() && i <= maxFileSize) {
+        inf >> currLine;
+    //do some checking on currLine?
+
+        arr[i] = currLine;
+        i++;
+    }
+    numLines = i;
+}
+
+void fileHandler::closeFile() {
+
+    //close the file
+    inf.close();
+}
+
++++++++++++++++header^++++++++++++++++++++===
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+const int maxFileSize = 100;
+
+class fileHandler {
+    
+    string fileName;
+    string currLine;
+    int numLines;
+    ifstream inf;
+
+    void openFile(string file);
+    void closeFile();
+    string* toStringArray(string arr[]);
+
+};
