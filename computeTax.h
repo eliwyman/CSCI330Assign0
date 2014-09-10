@@ -4,6 +4,7 @@
 using namespace std;
 
 class computeTax {
+
     public:
 		computeTax();
         float computeTaxPayable(float inc);

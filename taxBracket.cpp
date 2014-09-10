@@ -33,9 +33,3 @@ void taxBracket::loadBracket(){
 	taxData[0][2] = 21100.00;
 	taxData[0][3] = 0.29;
 }
-
-taxBracket::taxBracket() {
-
-	delete taxData;
-
-}
