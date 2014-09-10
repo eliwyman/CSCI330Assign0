@@ -1,44 +1,36 @@
 #include <string>
 #include "taxBracket.h"
-#include "fileParser.h"
 
 using namespace std;
 
-void taxBracket::loadBracket(string arr[], int num) {
+void taxBracket::taxBracket() {
 
-    //Let's assume I am passed a string array of tax brackets
-    //then I will take each line and put them into taxBracket[]
-    int numBrackets = num;
-    string temp1;
-    string temp2;
+    taxData[i].incomeLow = tempLow;
+    taxData[i].incomeHigh = tempHigh;
+    taxData[i].taxBase = tempBase;
+    taxData[i].taxRate = tempRate;
 
-    //loop through the array of taxBracket data
-    for (int i = 0; i < numBrackets; i++) {
-        //grab one bracket of taxBracket data
-        temp1 = arr[i];
+netIncomelow1 = 0.00;
+netIncomehigh1 = 34999.99;
+taxBase1 = 0.00;
+taxRate1 = 0.16;
+netIncomelow2 = 35000.00;
+netIncomehigh2 = 69999.00;
+taxBase2 = 5600.00;
+taxRate2 = 0.22;
+netIncomelow3 = 70000.00;
+netIncomehigh3 = 99999.99;
+taxBase3 = 13300.00;
+taxRate3 = 0.26;
+netIncomelow4 = 100000.00;
+netIncomehigh4 = null;
+taxBase4 = 21100.00;
+taxRate4 = 0.29;
 
-        //process the bracket data
-            for (int j=0; j<str.length(); j++)
-            {
-                if (temp1[j] == delimiter)
-                    temp1[j] = ' ';
+}
 
-            }
+void taxBracket::~taxBracket() {
 
-            string arr[numBrackets];
-            stringstream ss(temp1);
-            while (ss >> temp2)
-                array.push_back(temp2);
-
-            return arr;
-    }
-
-
-
-
-                //find length of array and declare it MOVE TO MAIN
-                int numBrackets = fileParser::numLines();   
-                string arr[numBrackets] = fileParser::toStringArray(arr);
-                //END
+    delete taxData;
 
 }

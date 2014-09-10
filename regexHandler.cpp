@@ -1,5 +1,6 @@
 #include <string>
 #include <regex>
+#include "regexHandler.h"
 
 using namespace std;
 

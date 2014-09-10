@@ -4,6 +4,6 @@ using namespace std;
 
 class userTaxData {
     
-
+name = s.substr(0, s.find(delimiter));
 
 }

@@ -1,0 +1,3 @@
+Eli Johnson     1000000000.00
+Ted Moseby      22,000.00
+Girl    -1000

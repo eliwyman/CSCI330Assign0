@@ -1,31 +1,22 @@
 #include <string>
 #include <sstream>
+#include "parser.h"
 
 using namespace std;
 
-parser::parser(string del, int fields) {
+string parser::singleParse(string str, string del) {
 
-    delimiter = del;
-    numFields = fields;
-
+    string delimiter = del;
+    string sub = str.substr(0, s.find(delimiter));
+    return sub;
 
 }
 
-string* parser::lineParser (string str){
+string parser::doubleParse(string str, string headDel, string tailDel){
 
-    for (int j=0; j<str.length(); j++)
-    {
-        if (str[i] == delimiter)
-            str[i] = ' ';
-
-    }
-
-    string arr[numFields];
-    stringstream ss(str);
-    string temp;
-    while (ss >> temp)
-        array.push_back(temp);
-
-    return arr;
+    string headDelimiter = headDel;
+    string tailDelimiter = tailDel;
+    string sub = str.substr(s.find(headDelimiter), s.find(tailDelimiter));
+    return sub;
 
 }

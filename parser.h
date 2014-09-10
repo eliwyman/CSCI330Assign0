@@ -4,10 +4,7 @@ using namespace std;
 
 class parser {
 
-    sting delimiter;
-    int numFields;
-
-    parser(string del, int fields);
-    string* lineParser(string str);
+    string singleParse(string str, string del);
+    string doubleParse(string str, string headDel, string tailDel);
     
 }

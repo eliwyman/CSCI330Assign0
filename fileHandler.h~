@@ -7,6 +7,7 @@ const int maxFileSize = 100;
 
 class fileHandler {
     
+
     string fileName;
     string currLine;
     int numLines;
@@ -17,6 +18,5 @@ class fileHandler {
     void closeFile();
     string* toStringArray(string arr[]);
     int numLines();
-    string*
 
 }
