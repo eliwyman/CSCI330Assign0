@@ -1,0 +1,14 @@
+g++ -Wall -c computeTax.cpp
+In file included from computeTax.cpp:1:0:
+computeTax.h:8:44: error: ‘taxData’ has not been declared
+computeTax.h:16:19: error: ‘taxData’ has not been declared
+computeTax.cpp:6:48: error: ‘taxData’ has not been declared
+computeTax.cpp: In member function ‘float computeTax::computeTaxPayable(float, int*)’:
+computeTax.cpp:14:23: error: expected primary-expression before ‘]’ token
+computeTax.cpp: At global scope:
+computeTax.cpp:19:29: error: ‘int computeTax::findBracket’ is not a static member of ‘class computeTax’
+computeTax.cpp:19:29: error: ‘taxData’ was not declared in this scope
+computeTax.cpp:19:44: error: expected ‘,’ or ‘;’ before ‘{’ token
+computeTax.cpp: In member function ‘float computeTax::computeTaxPayable(float, int*)’:
+computeTax.cpp:17:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [computeTax.o] Error 1
