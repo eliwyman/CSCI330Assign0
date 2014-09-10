@@ -3,13 +3,18 @@
 
 using namespace std;
 
-Class taxBracket {
+class computeTax {
     public:
-        float computeTax();
+        float computeTaxPayable(float inc, taxData data[]);
     private: 
-        string taxValues[][brackets];
         float netIncome;
         float taxPayable;
+		float taxBase;
+		float taxRate;
+		float taxBracket;
 
-}
+		int findBracket(taxData data[]);
+		float computeTaxPayable();
+
+};
 

@@ -2,6 +2,9 @@
 
 using namespace std;
 
+const float minIncome = 0.00;
+const float maxIncome = 1000000000000.00;
+
 const int numBrackets = 4;
 const float netIncomelow1 = 0.00;
 const float netIncomehigh1 = 34999.99;
@@ -16,23 +19,24 @@ const float netIncomehigh3 = 99999.99;
 const float taxBase3 = 13300.00;
 const float taxRate3 = 0.26;
 const float netIncomelow4 = 100000.00;
-const float netIncomehigh4 = null;
+//const float netIncomehigh4 = MaxIncome;
 const float taxBase4 = 21100.00;
 const float taxRate4 = 0.29;
 
 class taxBracket {
+	public:
 
-    taxData taxBracket[numBrackets];
-    
-    struct taxData {
+		struct taxData {
 
-        float incomeLow;
-        float incomeHigh;
-        float taxBase;
-        float taxRate;
+		    float incomeLow;
+		    float incomeHigh;
+		    float taxBase;
+		    float taxRate;
 
-    }
+		};
 
-    taxBracket();
-
-}
+		taxData data[numBrackets];		
+	private:
+	    taxBracket();
+		~taxBracket();
+};

@@ -1,19 +1,18 @@
 assign0: main.o
 	g++ -Wall main.o -o assign0
-main.o: main.cpp waiter.h waiter.o forker.h forker.o
+main.o: main.cpp computeTax.o fileHandler.o parser.o
 	g++ -Wall -c main.cpp
-forker.o: forker.cpp
-	g++ -Wall -c forker.cpp
-waiter.o: waiter.cpp
-	g++ -Wall -c waiter.cpp
-
-frontend:
-
-backend: 
-
+computeTax.o: computeTax.cpp
+	g++ -Wall -c computeTax.cpp
+fileHandler.o: fileHandler.cpp
+	g++ -Wall -c fileHandler.cpp
+parser.o: parser.cpp
+	g++ -Wall -c parser.cpp
+#taxBracket.o: taxBracket.cpp
+#	g++ -Wall -c taxBracket.cpp
 test1:
-    ./assign0 blah foo
+	./assign0 blah foo
 test2:
-    ./assign0 tax1.txt
+	./assign0 tax1.txt
 clean:
 	rm -rf *o *~
