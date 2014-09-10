@@ -1,7 +1,9 @@
 assign0: main.o
 	g++ -Wall main.o -o assign0
-main.o: main.cpp  computeTax.o parser.o taxBracket.o
-	g++ -Wall -c main.cpp
+main.o: computeTax.o parser.o taxBracket.o fileHandler.o main.cpp
+	g++ -Wall -c main.cpp -o main.o
+fileHandler.o: fileHandler.cpp
+	g++ -Wall -c fileHandler.cpp
 computeTax.o: computeTax.cpp
 	g++ -Wall -c computeTax.cpp
 parser.o: parser.cpp

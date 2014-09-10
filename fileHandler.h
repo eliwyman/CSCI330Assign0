@@ -1,21 +1,16 @@
-#include <iostream>
-#include <string>
+#include <fstream>
 
 using namespace std;
 
-const int maxFileSize = 100;
-
 class fileHandler {
-    
-    string fileName;
-    string currLine;
-    int numLines;
-    ifstream inf;
 
-    fileHandler();
-    void openFile();
-    void closeFile();
-    string* toStringArray(string arr[]);
-    int numLines();
+	public:
+		fileHandler();	
+		int openFile(string file);
+		int closeFile();
+		int parseFile(string *arr);
 
-}
+	private:
+
+		ifstream inf;
+};

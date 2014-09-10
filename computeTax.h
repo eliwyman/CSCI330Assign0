@@ -7,7 +7,9 @@ class computeTax {
 
     public:
 		computeTax();
+		~computeTax();
         float computeTaxPayable(float inc);
+
     private: 
         float netIncome;
         float taxPayable;
@@ -19,7 +21,7 @@ class computeTax {
 		int findBracket();
 		float computeTaxPayable();
 
-		~computeTax();
+
 
 };
 
