@@ -3,7 +3,7 @@
 
 using namespace std;
 
-float computeTax::computeTaxPayable(float inc, taxData data[]){
+float computeTax::computeTaxPayable(float inc, taxBracket tb){
 
 	netIncome = inc;
 	if (inc < minIncome || inc > maxIncome) {
@@ -11,19 +11,19 @@ float computeTax::computeTaxPayable(float inc, taxData data[]){
 		return 1;
 	}
 	
-	if (findBracket(data[]) == 0) {
+	if (findBracket(tb) == 0) {
 		return computeTaxPayable();
 	}
 }
 
-int computeTax::findBracket(taxData data[]){
+int computeTax::findBracket(taxBracket tb){
 
 	for (int i = 0; i < numBrackets; i++) {
-		if (netIncome >= data[i].incomeLow) {
-			if (i+1 = numBrackets || netIncome < data[i+1].incomeLow) {
-				taxBase = data[i].taxBase;
-				taxRate = data[i].taxRate;
-				taxBracket = data[i].incomeLow;
+		if (netIncome >= tb.data[i].incomeLow) {
+			if (i+1 = numBrackets || netIncome < tb.data[i+1].incomeLow) {
+				taxBase = tb.data[i].taxBase;
+				taxRate = tb.data[i].taxRate;
+				taxBracket = tb.data[i].incomeLow;
 				return 0;			
 			}
 		}

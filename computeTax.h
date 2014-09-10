@@ -5,7 +5,8 @@ using namespace std;
 
 class computeTax {
     public:
-        float computeTaxPayable(float inc, taxData data[]);
+		computeTax();
+        float computeTaxPayable(float inc, taxBracket tb);
     private: 
         float netIncome;
         float taxPayable;
@@ -13,7 +14,7 @@ class computeTax {
 		float taxRate;
 		float taxBracket;
 
-		int findBracket(taxData data[]);
+		int findBracket(taxBracket tb);
 		float computeTaxPayable();
 
 };
