@@ -6,16 +6,19 @@ using namespace std;
 class computeTax {
     public:
 		computeTax();
-        float computeTaxPayable(float inc, taxBracket tb);
+        float computeTaxPayable(float inc);
     private: 
         float netIncome;
         float taxPayable;
 		float taxBase;
 		float taxRate;
-		float taxBracket;
+		float taxBaseAmount;
+		taxBracket *tax;
 
-		int findBracket(taxBracket tb);
+		int findBracket();
 		float computeTaxPayable();
+
+		~computeTax();
 
 };
 
